@@ -1,5 +1,14 @@
 # International-Space-Station-ISS
-OpenNotify has several API endpoints. An endpoint is a server route that is used to retrieve different data from the API. This endpoint gets the current latitude and longitude of the International Space Station. we'll be querying a simple API to retrieve data about the International Space Station (ISS). 
+OpenNotify has several API endpoints. An endpoint is a server route that is used to retrieve different data from the API. This endpoint gets the current latitude and longitude of the International Space Station. We'll be querying a simple API to retrieve data about the International Space Station (ISS). 
+
+The ISS Pass endpoint returns when the ISS will next pass over a given location on earth. In order to compute this, we need to pass the coordinates of the location to the API. We do this by passing two parameters -- latitude and longitude.
+
+We can do this by adding an optional keyword argument, params, to our request. In this case, there are two parameters we need to pass:
+
+* lat -- The latitude of the location we want.
+* lon -- The longitude of the location we want.
+
+We can make a dictionary with these parameters, and then pass them into the requests.get function.
 
 ```
 # Set up the parameters we want to pass to the API.
